@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace WinAppPairollBoards
 {
@@ -10,10 +11,10 @@ namespace WinAppPairollBoards
         public FormAuthorization()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen; //Чтобы форма отображалась в центре экрана при запуске
-            this.BackColor = Color.FromArgb(255, 255, 255); //Цвет фона белый
-            this.Width = 800; //Ширина формы
-            this.MinimumSize = new Size(800, 410); //Минимальный неизменяемый размер окна
+            this.StartPosition = FormStartPosition.CenterScreen;//Чтобы форма отображалась в центре экрана при запуске
+            this.BackColor = Color.FromArgb(255, 255, 255);//Цвет фона белый
+            this.Width = 800;//Ширина формы
+            this.MinimumSize = new Size(800, 410);//Минимальный неизменяемый размер окна
         }
 
         private void labelPassword_Click(object sender, EventArgs e)
