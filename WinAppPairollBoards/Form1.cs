@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinAppPairollBoards
 {
-    public partial class FormExecutor : Form
+    public partial class Form1 : Form
     {
-        public FormExecutor()
+        public Form1()
         {
             InitializeComponent();
         }
