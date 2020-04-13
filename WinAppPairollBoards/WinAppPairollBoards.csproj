@@ -58,6 +58,12 @@
     <Compile Include="EditCoefficients.Designer.cs">
       <DependentUpon>EditCoefficients.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditExecutors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditExecutors.Designer.cs">
+      <DependentUpon>EditExecutors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditCoefficients.resx">
       <DependentUpon>EditCoefficients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditExecutors.resx">
+      <DependentUpon>EditExecutors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Executor.resx">
       <DependentUpon>Executor.cs</DependentUpon>

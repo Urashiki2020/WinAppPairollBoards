@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditCoefficients));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pairollBoardsDataSet = new WinAppPairollBoards.PairollBoardsDataSet();
-            this.pairollBoardsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coefficientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coefficientTableAdapter = new WinAppPairollBoards.PairollBoardsDataSetTableAdapters.CoefficientTableAdapter();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.pictureBoxEsoft2 = new System.Windows.Forms.PictureBox();
             this.idcoefficientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.juniorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,12 +41,18 @@
             this.ktimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kcomplexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kmoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coefficientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pairollBoardsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pairollBoardsDataSet = new WinAppPairollBoards.PairollBoardsDataSet();
+            this.coefficientTableAdapter = new WinAppPairollBoards.PairollBoardsDataSetTableAdapters.CoefficientTableAdapter();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.pictureBoxEsoft2 = new System.Windows.Forms.PictureBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,48 +83,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(780, 300);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
-            // 
-            // pairollBoardsDataSet
-            // 
-            this.pairollBoardsDataSet.DataSetName = "PairollBoardsDataSet";
-            this.pairollBoardsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pairollBoardsDataSetBindingSource
-            // 
-            this.pairollBoardsDataSetBindingSource.DataSource = this.pairollBoardsDataSet;
-            this.pairollBoardsDataSetBindingSource.Position = 0;
-            // 
-            // coefficientBindingSource
-            // 
-            this.coefficientBindingSource.DataMember = "Coefficient";
-            this.coefficientBindingSource.DataSource = this.pairollBoardsDataSetBindingSource;
-            // 
-            // coefficientTableAdapter
-            // 
-            this.coefficientTableAdapter.ClearBeforeFill = true;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(12, 399);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(140, 40);
-            this.buttonSave.TabIndex = 1;
-            this.buttonSave.Text = "Сохранить";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // pictureBoxEsoft2
-            // 
-            this.pictureBoxEsoft2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxEsoft2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEsoft2.Image")));
-            this.pictureBoxEsoft2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxEsoft2.Name = "pictureBoxEsoft2";
-            this.pictureBoxEsoft2.Size = new System.Drawing.Size(802, 87);
-            this.pictureBoxEsoft2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxEsoft2.TabIndex = 2;
-            this.pictureBoxEsoft2.TabStop = false;
             // 
             // idcoefficientDataGridViewTextBoxColumn
             // 
@@ -196,6 +154,48 @@
             this.kmoneyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.kmoneyDataGridViewTextBoxColumn.Name = "kmoneyDataGridViewTextBoxColumn";
             // 
+            // coefficientBindingSource
+            // 
+            this.coefficientBindingSource.DataMember = "Coefficient";
+            this.coefficientBindingSource.DataSource = this.pairollBoardsDataSetBindingSource;
+            // 
+            // pairollBoardsDataSetBindingSource
+            // 
+            this.pairollBoardsDataSetBindingSource.DataSource = this.pairollBoardsDataSet;
+            this.pairollBoardsDataSetBindingSource.Position = 0;
+            // 
+            // pairollBoardsDataSet
+            // 
+            this.pairollBoardsDataSet.DataSetName = "PairollBoardsDataSet";
+            this.pairollBoardsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coefficientTableAdapter
+            // 
+            this.coefficientTableAdapter.ClearBeforeFill = true;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(12, 399);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(140, 40);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // pictureBoxEsoft2
+            // 
+            this.pictureBoxEsoft2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxEsoft2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEsoft2.Image")));
+            this.pictureBoxEsoft2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxEsoft2.Name = "pictureBoxEsoft2";
+            this.pictureBoxEsoft2.Size = new System.Drawing.Size(802, 87);
+            this.pictureBoxEsoft2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxEsoft2.TabIndex = 2;
+            this.pictureBoxEsoft2.TabStop = false;
+            // 
             // buttonBack
             // 
             this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -213,7 +213,7 @@
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDelete.Location = new System.Drawing.Point(158, 399);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(140, 40);
+            this.buttonDelete.Size = new System.Drawing.Size(230, 40);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Удалить запись";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -233,9 +233,9 @@
             this.Text = "Редактирование коэффициентов";
             this.Load += new System.EventHandler(this.FormEditCoefficients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft2)).EndInit();
             this.ResumeLayout(false);
 

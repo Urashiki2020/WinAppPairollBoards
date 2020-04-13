@@ -49,6 +49,7 @@
             // 
             // buttonExecutors
             // 
+            this.buttonExecutors.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonExecutors.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExecutors.Location = new System.Drawing.Point(138, 155);
             this.buttonExecutors.Name = "buttonExecutors";
@@ -56,9 +57,11 @@
             this.buttonExecutors.TabIndex = 1;
             this.buttonExecutors.Text = "Исполнители";
             this.buttonExecutors.UseVisualStyleBackColor = true;
+            this.buttonExecutors.Click += new System.EventHandler(this.buttonExecutors_Click);
             // 
             // buttonCoefficients
             // 
+            this.buttonCoefficients.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonCoefficients.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCoefficients.Location = new System.Drawing.Point(138, 209);
             this.buttonCoefficients.Name = "buttonCoefficients";

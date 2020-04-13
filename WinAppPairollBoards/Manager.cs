@@ -36,5 +36,12 @@ namespace WinAppPairollBoards
             formEditCoefficients.ShowDialog();
             this.Hide();
         }
+
+        private void buttonExecutors_Click(object sender, EventArgs e)
+        {
+            Form formEditExecutors = new FormEditExecutors();
+            formEditExecutors.ShowDialog();
+            this.Hide();
+        }
     }
 }

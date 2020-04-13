@@ -48,6 +48,7 @@
             // 
             // buttonTasks
             // 
+            this.buttonTasks.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonTasks.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTasks.Location = new System.Drawing.Point(128, 190);
             this.buttonTasks.Name = "buttonTasks";
@@ -58,6 +59,7 @@
             // 
             // buttonExit2
             // 
+            this.buttonExit2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonExit2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit2.Location = new System.Drawing.Point(460, 344);
             this.buttonExit2.Name = "buttonExit2";
