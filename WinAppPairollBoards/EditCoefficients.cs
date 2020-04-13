@@ -46,5 +46,12 @@ namespace WinAppPairollBoards
             coefficientTableAdapter.Update(pairollBoardsDataSet); //Обновление данных в базе
             MessageBox.Show("Запись удалена из базы данных");
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Form formManager = new FormManager();
+            formManager.ShowDialog();
+            this.Hide();
+        }
     }
 }

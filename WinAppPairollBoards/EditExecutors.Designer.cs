@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditExecutors));
             this.pictureBoxEsoft3 = new System.Windows.Forms.PictureBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idexecutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +43,14 @@
             this.buttonBack1 = new System.Windows.Forms.Button();
             this.buttonDelete1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.executorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxEsoft3
             // 
+            this.pictureBoxEsoft3.BackColor = System.Drawing.Color.White;
             this.pictureBoxEsoft3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxEsoft3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEsoft3.Image")));
             this.pictureBoxEsoft3.Location = new System.Drawing.Point(0, 0);
@@ -59,27 +60,27 @@
             this.pictureBoxEsoft3.TabIndex = 3;
             this.pictureBoxEsoft3.TabStop = false;
             // 
-            // dataGridView2
+            // dataGridView1
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idexecutorDataGridViewTextBoxColumn,
             this.iduserDataGridViewTextBoxColumn,
             this.gradeDataGridViewTextBoxColumn,
             this.idmanagerDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.executorBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 93);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(648, 153);
-            this.dataGridView2.TabIndex = 4;
-            this.dataGridView2.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
+            this.dataGridView1.DataSource = this.executorBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 93);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(648, 153);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // idexecutorDataGridViewTextBoxColumn
             // 
@@ -129,7 +130,7 @@
             this.buttonSave1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave1.Location = new System.Drawing.Point(12, 255);
             this.buttonSave1.Name = "buttonSave1";
-            this.buttonSave1.Size = new System.Drawing.Size(140, 40);
+            this.buttonSave1.Size = new System.Drawing.Size(160, 40);
             this.buttonSave1.TabIndex = 5;
             this.buttonSave1.Text = "Сохранить";
             this.buttonSave1.UseVisualStyleBackColor = true;
@@ -151,9 +152,9 @@
             // 
             this.buttonDelete1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDelete1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelete1.Location = new System.Drawing.Point(158, 255);
+            this.buttonDelete1.Location = new System.Drawing.Point(178, 255);
             this.buttonDelete1.Name = "buttonDelete1";
-            this.buttonDelete1.Size = new System.Drawing.Size(230, 40);
+            this.buttonDelete1.Size = new System.Drawing.Size(228, 40);
             this.buttonDelete1.TabIndex = 7;
             this.buttonDelete1.Text = "Удалить запись";
             this.buttonDelete1.UseVisualStyleBackColor = true;
@@ -167,13 +168,13 @@
             this.Controls.Add(this.buttonDelete1);
             this.Controls.Add(this.buttonBack1);
             this.Controls.Add(this.buttonSave1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBoxEsoft3);
             this.Name = "FormEditExecutors";
             this.Text = "Редактирование исполнителей";
             this.Load += new System.EventHandler(this.EditExecutors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.executorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pairollBoardsDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -183,7 +184,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxEsoft3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private PairollBoardsDataSet pairollBoardsDataSet;
         private System.Windows.Forms.BindingSource executorBindingSource;
         private PairollBoardsDataSetTableAdapters.ExecutorTableAdapter executorTableAdapter;

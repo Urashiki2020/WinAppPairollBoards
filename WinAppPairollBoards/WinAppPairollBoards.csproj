@@ -64,6 +64,12 @@
     <Compile Include="EditExecutors.Designer.cs">
       <DependentUpon>EditExecutors.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTasks.Designer.cs">
+      <DependentUpon>EditTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditExecutors.resx">
       <DependentUpon>EditExecutors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTasks.resx">
+      <DependentUpon>EditTasks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Executor.resx">
       <DependentUpon>Executor.cs</DependentUpon>

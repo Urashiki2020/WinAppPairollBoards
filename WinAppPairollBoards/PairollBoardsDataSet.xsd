@@ -391,7 +391,7 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
   <xs:element name="PairollBoardsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PairollBoardsDataSet" msprop:Generator_UserDSName="PairollBoardsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Coefficient" msprop:Generator_TableClassName="CoefficientDataTable" msprop:Generator_TableVarName="tableCoefficient" msprop:Generator_TablePropName="Coefficient" msprop:Generator_RowDeletingName="CoefficientRowDeleting" msprop:Generator_RowChangingName="CoefficientRowChanging" msprop:Generator_RowEvHandlerName="CoefficientRowChangeEventHandler" msprop:Generator_RowDeletedName="CoefficientRowDeleted" msprop:Generator_UserTableName="Coefficient" msprop:Generator_RowChangedName="CoefficientRowChanged" msprop:Generator_RowEvArgName="CoefficientRowChangeEvent" msprop:Generator_RowClassName="CoefficientRow">
+        <xs:element name="Coefficient" msprop:Generator_TableClassName="CoefficientDataTable" msprop:Generator_TableVarName="tableCoefficient" msprop:Generator_RowChangedName="CoefficientRowChanged" msprop:Generator_TablePropName="Coefficient" msprop:Generator_RowDeletingName="CoefficientRowDeleting" msprop:Generator_RowChangingName="CoefficientRowChanging" msprop:Generator_RowEvHandlerName="CoefficientRowChangeEventHandler" msprop:Generator_RowDeletedName="CoefficientRowDeleted" msprop:Generator_RowClassName="CoefficientRow" msprop:Generator_UserTableName="Coefficient" msprop:Generator_RowEvArgName="CoefficientRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_coefficient" msprop:Generator_ColumnVarNameInTable="columnid_coefficient" msprop:Generator_ColumnPropNameInRow="id_coefficient" msprop:Generator_ColumnPropNameInTable="id_coefficientColumn" msprop:Generator_UserColumnName="id_coefficient" type="xs:int" />
@@ -407,7 +407,7 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Executor" msprop:Generator_TableClassName="ExecutorDataTable" msprop:Generator_TableVarName="tableExecutor" msprop:Generator_TablePropName="Executor" msprop:Generator_RowDeletingName="ExecutorRowDeleting" msprop:Generator_RowChangingName="ExecutorRowChanging" msprop:Generator_RowEvHandlerName="ExecutorRowChangeEventHandler" msprop:Generator_RowDeletedName="ExecutorRowDeleted" msprop:Generator_UserTableName="Executor" msprop:Generator_RowChangedName="ExecutorRowChanged" msprop:Generator_RowEvArgName="ExecutorRowChangeEvent" msprop:Generator_RowClassName="ExecutorRow">
+        <xs:element name="Executor" msprop:Generator_TableClassName="ExecutorDataTable" msprop:Generator_TableVarName="tableExecutor" msprop:Generator_RowChangedName="ExecutorRowChanged" msprop:Generator_TablePropName="Executor" msprop:Generator_RowDeletingName="ExecutorRowDeleting" msprop:Generator_RowChangingName="ExecutorRowChanging" msprop:Generator_RowEvHandlerName="ExecutorRowChangeEventHandler" msprop:Generator_RowDeletedName="ExecutorRowDeleted" msprop:Generator_RowClassName="ExecutorRow" msprop:Generator_UserTableName="Executor" msprop:Generator_RowEvArgName="ExecutorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_executor" msprop:Generator_ColumnVarNameInTable="columnid_executor" msprop:Generator_ColumnPropNameInRow="id_executor" msprop:Generator_ColumnPropNameInTable="id_executorColumn" msprop:Generator_UserColumnName="id_executor" type="xs:int" />
@@ -423,7 +423,7 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Manager" msprop:Generator_TableClassName="ManagerDataTable" msprop:Generator_TableVarName="tableManager" msprop:Generator_TablePropName="Manager" msprop:Generator_RowDeletingName="ManagerRowDeleting" msprop:Generator_RowChangingName="ManagerRowChanging" msprop:Generator_RowEvHandlerName="ManagerRowChangeEventHandler" msprop:Generator_RowDeletedName="ManagerRowDeleted" msprop:Generator_UserTableName="Manager" msprop:Generator_RowChangedName="ManagerRowChanged" msprop:Generator_RowEvArgName="ManagerRowChangeEvent" msprop:Generator_RowClassName="ManagerRow">
+        <xs:element name="Manager" msprop:Generator_TableClassName="ManagerDataTable" msprop:Generator_TableVarName="tableManager" msprop:Generator_RowChangedName="ManagerRowChanged" msprop:Generator_TablePropName="Manager" msprop:Generator_RowDeletingName="ManagerRowDeleting" msprop:Generator_RowChangingName="ManagerRowChanging" msprop:Generator_RowEvHandlerName="ManagerRowChangeEventHandler" msprop:Generator_RowDeletedName="ManagerRowDeleted" msprop:Generator_RowClassName="ManagerRow" msprop:Generator_UserTableName="Manager" msprop:Generator_RowEvArgName="ManagerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_manager" msprop:Generator_ColumnVarNameInTable="columnid_manager" msprop:Generator_ColumnPropNameInRow="id_manager" msprop:Generator_ColumnPropNameInTable="id_managerColumn" msprop:Generator_UserColumnName="id_manager" type="xs:int" />
@@ -432,7 +432,7 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tasks" msprop:Generator_TableClassName="TasksDataTable" msprop:Generator_TableVarName="tableTasks" msprop:Generator_TablePropName="Tasks" msprop:Generator_RowDeletingName="TasksRowDeleting" msprop:Generator_RowChangingName="TasksRowChanging" msprop:Generator_RowEvHandlerName="TasksRowChangeEventHandler" msprop:Generator_RowDeletedName="TasksRowDeleted" msprop:Generator_UserTableName="Tasks" msprop:Generator_RowChangedName="TasksRowChanged" msprop:Generator_RowEvArgName="TasksRowChangeEvent" msprop:Generator_RowClassName="TasksRow">
+        <xs:element name="Tasks" msprop:Generator_TableClassName="TasksDataTable" msprop:Generator_TableVarName="tableTasks" msprop:Generator_RowChangedName="TasksRowChanged" msprop:Generator_TablePropName="Tasks" msprop:Generator_RowDeletingName="TasksRowDeleting" msprop:Generator_RowChangingName="TasksRowChanging" msprop:Generator_RowEvHandlerName="TasksRowChangeEventHandler" msprop:Generator_RowDeletedName="TasksRowDeleted" msprop:Generator_RowClassName="TasksRow" msprop:Generator_UserTableName="Tasks" msprop:Generator_RowEvArgName="TasksRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_task" msprop:Generator_ColumnVarNameInTable="columnid_task" msprop:Generator_ColumnPropNameInRow="id_task" msprop:Generator_ColumnPropNameInTable="id_taskColumn" msprop:Generator_UserColumnName="id_task" type="xs:int" />
@@ -464,7 +464,7 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_RowClassName="UsersRow">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowClassName="UsersRow" msprop:Generator_UserTableName="Users" msprop:Generator_RowEvArgName="UsersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_user" msprop:Generator_ColumnVarNameInTable="columnid_user" msprop:Generator_ColumnPropNameInRow="id_user" msprop:Generator_ColumnPropNameInTable="id_userColumn" msprop:Generator_UserColumnName="id_user" type="xs:int" />
@@ -516,12 +516,4 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
       <xs:field xpath="mstns:id_user" />
     </xs:unique>
   </xs:element>
-  <xs:annotation>
-    <xs:appinfo>
-      <msdata:Relationship name="FK_Executor_Manager" msdata:parent="Manager" msdata:child="Executor" msdata:parentkey="id_manager" msdata:childkey="id_manager" msprop:Generator_UserChildTable="Executor" msprop:Generator_ChildPropName="GetExecutorRows" msprop:Generator_UserRelationName="FK_Executor_Manager" msprop:Generator_RelationVarName="relationFK_Executor_Manager" msprop:Generator_UserParentTable="Manager" msprop:Generator_ParentPropName="ManagerRow" />
-      <msdata:Relationship name="FK_Executor_Users" msdata:parent="Users" msdata:child="Executor" msdata:parentkey="id_user" msdata:childkey="id_executor" msprop:Generator_UserChildTable="Executor" msprop:Generator_ChildPropName="GetExecutorRows" msprop:Generator_UserRelationName="FK_Executor_Users" msprop:Generator_RelationVarName="relationFK_Executor_Users" msprop:Generator_UserParentTable="Users" msprop:Generator_ParentPropName="UsersRow" />
-      <msdata:Relationship name="FK_Manager_Coefficient" msdata:parent="Coefficient" msdata:child="Manager" msdata:parentkey="id_coefficient" msdata:childkey="id_coefficient" msprop:Generator_UserChildTable="Manager" msprop:Generator_ChildPropName="GetManagerRows" msprop:Generator_UserRelationName="FK_Manager_Coefficient" msprop:Generator_ParentPropName="CoefficientRow" msprop:Generator_RelationVarName="relationFK_Manager_Coefficient" msprop:Generator_UserParentTable="Coefficient" />
-      <msdata:Relationship name="FK_Manager_Users" msdata:parent="Users" msdata:child="Manager" msdata:parentkey="id_user" msdata:childkey="id_user" msprop:Generator_UserChildTable="Manager" msprop:Generator_ChildPropName="GetManagerRows" msprop:Generator_UserRelationName="FK_Manager_Users" msprop:Generator_RelationVarName="relationFK_Manager_Users" msprop:Generator_UserParentTable="Users" msprop:Generator_ParentPropName="UsersRow" />
-    </xs:appinfo>
-  </xs:annotation>
 </xs:schema>

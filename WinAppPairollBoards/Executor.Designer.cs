@@ -56,6 +56,7 @@
             this.buttonTasks.TabIndex = 1;
             this.buttonTasks.Text = "Задачи";
             this.buttonTasks.UseVisualStyleBackColor = true;
+            this.buttonTasks.Click += new System.EventHandler(this.buttonTasks_Click);
             // 
             // buttonExit2
             // 
@@ -73,6 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(583, 400);
             this.Controls.Add(this.buttonExit2);
             this.Controls.Add(this.buttonTasks);

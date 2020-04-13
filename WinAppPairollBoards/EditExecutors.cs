@@ -51,7 +51,7 @@ namespace WinAppPairollBoards
 
         private void buttonDelete1_Click(object sender, EventArgs e)
         {
-            dataGridView2.Rows.RemoveAt(dataGridView2.CurrentCell.RowIndex);//Удаление записи
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);//Удаление записи
             executorTableAdapter.Update(pairollBoardsDataSet);//Обновление данных в базе
             MessageBox.Show("Запись удалена, изменения сохранены в базе данных");
         }

@@ -23,5 +23,12 @@ namespace WinAppPairollBoards
             formAuthorization.ShowDialog();
             this.Hide();
         }
+
+        private void buttonTasks_Click(object sender, EventArgs e)
+        {
+            Form formEditTasks = new FormEditTasks();
+            formEditTasks.ShowDialog();
+            this.Hide();
+        }
     }
 }

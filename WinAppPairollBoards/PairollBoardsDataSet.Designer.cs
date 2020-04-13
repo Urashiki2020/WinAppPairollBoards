@@ -34,14 +34,6 @@ namespace WinAppPairollBoards {
         
         private UsersDataTable tableUsers;
         
-        private global::System.Data.DataRelation relationFK_Executor_Manager;
-        
-        private global::System.Data.DataRelation relationFK_Executor_Users;
-        
-        private global::System.Data.DataRelation relationFK_Manager_Coefficient;
-        
-        private global::System.Data.DataRelation relationFK_Manager_Users;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -298,10 +290,6 @@ namespace WinAppPairollBoards {
                     this.tableUsers.InitVars();
                 }
             }
-            this.relationFK_Executor_Manager = this.Relations["FK_Executor_Manager"];
-            this.relationFK_Executor_Users = this.Relations["FK_Executor_Users"];
-            this.relationFK_Manager_Coefficient = this.Relations["FK_Manager_Coefficient"];
-            this.relationFK_Manager_Users = this.Relations["FK_Manager_Users"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -322,22 +310,6 @@ namespace WinAppPairollBoards {
             base.Tables.Add(this.tableTasks);
             this.tableUsers = new UsersDataTable();
             base.Tables.Add(this.tableUsers);
-            this.relationFK_Executor_Manager = new global::System.Data.DataRelation("FK_Executor_Manager", new global::System.Data.DataColumn[] {
-                        this.tableManager.id_managerColumn}, new global::System.Data.DataColumn[] {
-                        this.tableExecutor.id_managerColumn}, false);
-            this.Relations.Add(this.relationFK_Executor_Manager);
-            this.relationFK_Executor_Users = new global::System.Data.DataRelation("FK_Executor_Users", new global::System.Data.DataColumn[] {
-                        this.tableUsers.id_userColumn}, new global::System.Data.DataColumn[] {
-                        this.tableExecutor.id_executorColumn}, false);
-            this.Relations.Add(this.relationFK_Executor_Users);
-            this.relationFK_Manager_Coefficient = new global::System.Data.DataRelation("FK_Manager_Coefficient", new global::System.Data.DataColumn[] {
-                        this.tableCoefficient.id_coefficientColumn}, new global::System.Data.DataColumn[] {
-                        this.tableManager.id_coefficientColumn}, false);
-            this.Relations.Add(this.relationFK_Manager_Coefficient);
-            this.relationFK_Manager_Users = new global::System.Data.DataRelation("FK_Manager_Users", new global::System.Data.DataColumn[] {
-                        this.tableUsers.id_userColumn}, new global::System.Data.DataColumn[] {
-                        this.tableManager.id_userColumn}, false);
-            this.Relations.Add(this.relationFK_Manager_Users);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -941,19 +913,13 @@ namespace WinAppPairollBoards {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ExecutorRow AddExecutorRow(UsersRow parentUsersRowByFK_Executor_Users, int id_user, string grade, ManagerRow parentManagerRowByFK_Executor_Manager) {
+            public ExecutorRow AddExecutorRow(int id_executor, int id_user, string grade, int id_manager) {
                 ExecutorRow rowExecutorRow = ((ExecutorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        id_executor,
                         id_user,
                         grade,
-                        null};
-                if ((parentUsersRowByFK_Executor_Users != null)) {
-                    columnValuesArray[0] = parentUsersRowByFK_Executor_Users[0];
-                }
-                if ((parentManagerRowByFK_Executor_Manager != null)) {
-                    columnValuesArray[3] = parentManagerRowByFK_Executor_Manager[0];
-                }
+                        id_manager};
                 rowExecutorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowExecutorRow);
                 return rowExecutorRow;
@@ -1239,18 +1205,12 @@ namespace WinAppPairollBoards {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ManagerRow AddManagerRow(int id_manager, UsersRow parentUsersRowByFK_Manager_Users, CoefficientRow parentCoefficientRowByFK_Manager_Coefficient) {
+            public ManagerRow AddManagerRow(int id_manager, int id_user, int id_coefficient) {
                 ManagerRow rowManagerRow = ((ManagerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_manager,
-                        null,
-                        null};
-                if ((parentUsersRowByFK_Manager_Users != null)) {
-                    columnValuesArray[1] = parentUsersRowByFK_Manager_Users[0];
-                }
-                if ((parentCoefficientRowByFK_Manager_Coefficient != null)) {
-                    columnValuesArray[2] = parentCoefficientRowByFK_Manager_Coefficient[0];
-                }
+                        id_user,
+                        id_coefficient};
                 rowManagerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowManagerRow);
                 return rowManagerRow;
@@ -2376,17 +2336,6 @@ namespace WinAppPairollBoards {
             public void SetK_moneyNull() {
                 this[this.tableCoefficient.K_moneyColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ManagerRow[] GetManagerRows() {
-                if ((this.Table.ChildRelations["FK_Manager_Coefficient"] == null)) {
-                    return new ManagerRow[0];
-                }
-                else {
-                    return ((ManagerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Manager_Coefficient"])));
-                }
-            }
         }
         
         /// <summary>
@@ -2454,28 +2403,6 @@ namespace WinAppPairollBoards {
                 }
                 set {
                     this[this.tableExecutor.id_managerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ManagerRow ManagerRow {
-                get {
-                    return ((ManagerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Executor_Manager"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Executor_Manager"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow UsersRow {
-                get {
-                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Executor_Users"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Executor_Users"]);
                 }
             }
             
@@ -2563,28 +2490,6 @@ namespace WinAppPairollBoards {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CoefficientRow CoefficientRow {
-                get {
-                    return ((CoefficientRow)(this.GetParentRow(this.Table.ParentRelations["FK_Manager_Coefficient"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Manager_Coefficient"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow UsersRow {
-                get {
-                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Manager_Users"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Manager_Users"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_userNull() {
                 return this.IsNull(this.tableManager.id_userColumn);
             }
@@ -2605,17 +2510,6 @@ namespace WinAppPairollBoards {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_coefficientNull() {
                 this[this.tableManager.id_coefficientColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ExecutorRow[] GetExecutorRows() {
-                if ((this.Table.ChildRelations["FK_Executor_Manager"] == null)) {
-                    return new ExecutorRow[0];
-                }
-                else {
-                    return ((ExecutorRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Executor_Manager"])));
-                }
             }
         }
         
@@ -2976,28 +2870,6 @@ namespace WinAppPairollBoards {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetroleNull() {
                 this[this.tableUsers.roleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ExecutorRow[] GetExecutorRows() {
-                if ((this.Table.ChildRelations["FK_Executor_Users"] == null)) {
-                    return new ExecutorRow[0];
-                }
-                else {
-                    return ((ExecutorRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Executor_Users"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ManagerRow[] GetManagerRows() {
-                if ((this.Table.ChildRelations["FK_Manager_Users"] == null)) {
-                    return new ManagerRow[0];
-                }
-                else {
-                    return ((ManagerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Manager_Users"])));
-                }
             }
         }
         
@@ -5647,12 +5519,12 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._executorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Executor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._usersTableAdapter.Update(updatedRows));
+                    result = (result + this._executorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5665,21 +5537,21 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._executorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Executor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._executorTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tasksTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Tasks.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tasksTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._usersTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5701,11 +5573,11 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._executorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Executor.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._usersTableAdapter.Update(addedRows));
+                    result = (result + this._executorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5717,19 +5589,19 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._executorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Executor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._executorTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tasksTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Tasks.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tasksTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._usersTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5743,19 +5615,19 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(PairollBoardsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._usersTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tasksTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tasks.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tasksTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._executorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Executor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._executorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5767,11 +5639,11 @@ SELECT id_user, login, password, Full_name, role FROM Users WHERE (id_user = @id
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._executorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Executor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._usersTableAdapter.Update(deletedRows));
+                    result = (result + this._executorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
