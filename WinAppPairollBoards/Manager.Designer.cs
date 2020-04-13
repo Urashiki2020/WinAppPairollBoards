@@ -66,6 +66,7 @@
             this.buttonCoefficients.TabIndex = 2;
             this.buttonCoefficients.Text = "Коэффициенты";
             this.buttonCoefficients.UseVisualStyleBackColor = true;
+            this.buttonCoefficients.Click += new System.EventHandler(this.buttonCoefficients_Click);
             // 
             // buttonExit1
             // 

@@ -29,5 +29,12 @@ namespace WinAppPairollBoards
             formAuthorization.ShowDialog();
             this.Hide();
         }
+
+        private void buttonCoefficients_Click(object sender, EventArgs e)
+        {
+            Form formEditCoefficients = new FormEditCoefficients();
+            formEditCoefficients.ShowDialog();
+            this.Hide();
+        }
     }
 }
