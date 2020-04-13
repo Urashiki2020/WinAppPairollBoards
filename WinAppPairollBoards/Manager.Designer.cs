@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManager));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEsoft1 = new System.Windows.Forms.PictureBox();
             this.buttonExecutors = new System.Windows.Forms.Button();
             this.buttonCoefficients = new System.Windows.Forms.Button();
             this.buttonExit1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxEsoft1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(583, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxEsoft1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxEsoft1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEsoft1.Image")));
+            this.pictureBoxEsoft1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxEsoft1.Name = "pictureBoxEsoft1";
+            this.pictureBoxEsoft1.Size = new System.Drawing.Size(583, 87);
+            this.pictureBoxEsoft1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxEsoft1.TabIndex = 0;
+            this.pictureBoxEsoft1.TabStop = false;
             // 
             // buttonExecutors
             // 
@@ -69,13 +69,15 @@
             // 
             // buttonExit1
             // 
+            this.buttonExit1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonExit1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExit1.Location = new System.Drawing.Point(441, 340);
+            this.buttonExit1.Location = new System.Drawing.Point(460, 344);
             this.buttonExit1.Name = "buttonExit1";
             this.buttonExit1.Size = new System.Drawing.Size(111, 44);
             this.buttonExit1.TabIndex = 3;
             this.buttonExit1.Text = "Выход";
             this.buttonExit1.UseVisualStyleBackColor = true;
+            this.buttonExit1.Click += new System.EventHandler(this.buttonExit1_Click);
             // 
             // FormManager
             // 
@@ -85,18 +87,18 @@
             this.Controls.Add(this.buttonExit1);
             this.Controls.Add(this.buttonCoefficients);
             this.Controls.Add(this.buttonExecutors);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxEsoft1);
             this.Name = "FormManager";
             this.Text = "Рабочее окно менеджера";
             this.Load += new System.EventHandler(this.FormManager_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxEsoft1;
         private System.Windows.Forms.Button buttonExecutors;
         private System.Windows.Forms.Button buttonCoefficients;
         private System.Windows.Forms.Button buttonExit1;

@@ -16,5 +16,12 @@ namespace WinAppPairollBoards
         {
             InitializeComponent();
         }
+
+        private void buttonExit2_Click(object sender, EventArgs e)
+        {
+            Form formAuthorization = new FormAuthorization();
+            formAuthorization.ShowDialog();
+            this.Hide();
+        }
     }
 }
